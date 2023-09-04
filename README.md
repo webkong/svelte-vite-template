@@ -26,3 +26,9 @@ npm run dev
 ## i18n
 
 <https://github.com/kaisermann/svelte-i18n>
+
+## svelte-inview
+
+> Use for exposure statistics
+
+<https://github.com/maciekgrzybek/svelte-inview/>
