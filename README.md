@@ -1,11 +1,11 @@
-# Svelte + Vite + Router + i18n
+# Svelte + Vite + Router
 
-This template should help get you started developing with Svelte in Vite.
+This template should help get you started developing with Svelte quickly.
 
 ## Usage
 
 ```shell
-git clone git@github.com:webkong/svelte-vite-template.git
+git clone -b svt_router --depth=1 git@github.com:webkong/svelte-vite-template.git
 cd svelte-vite-template
 npm i
 npm run dev
@@ -18,17 +18,3 @@ npm run dev
 ## svelte-spa-router
 
 <https://github.com/ItalyPaleAle/svelte-spa-router>
-
-## UI
-
-<https://github.com/themesberg/flowbite-svelte>
-
-## i18n
-
-<https://github.com/kaisermann/svelte-i18n>
-
-## svelte-inview
-
-> Use for exposure statistics
-
-<https://github.com/maciekgrzybek/svelte-inview/>

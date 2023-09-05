@@ -10,7 +10,7 @@ export default defineConfig({
 			output: {
 				// Pack router, i18n and other libraries into the thunk file separately
 				manualChunks: {
-					thunk: ['svelte-i18n', 'svelte-spa-router']
+					thunk: ['svelte-spa-router']
 				},
 			},
 			// 开启tree shaking

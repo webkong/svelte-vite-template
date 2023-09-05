@@ -27,8 +27,6 @@
 		"vite": "^4.4.9"
 	},
 	"dependencies": {
-		"svelte-i18n": "^3.7.0",
-		"svelte-routing": "^2.1.0",
 		"svelte-spa-router": "^3.3.0"
 	}
 }

@@ -3,7 +3,6 @@
 	import viteLogo from "/vite.svg";
 	import Counter from "../lib/Counter.svelte";
 	import { push } from "svelte-spa-router";
-	import { t } from "svelte-i18n";
 </script>
 
 <main>
@@ -34,7 +33,6 @@
 	</p>
 
 	<p class="read-the-docs">Click on the Vite and Svelte logos to learn more</p>
-	<p>{$t("title")}</p>
 </main>
 <div>111</div>
 
