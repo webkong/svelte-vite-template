@@ -24,5 +24,11 @@ export default defineConfig({
 			// external: ['svelte-i18n', 'svelte-spa-router'],
 		}
 	},
-	
+	resolve: {
+		alias: {
+			"$components": path.resolve("./src/components"),
+			"$routes": path.resolve("./src/routes"),
+			"$stores": path.resolve("./src/stores"),
+		}
+	}	
 });
