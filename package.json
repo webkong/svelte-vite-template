@@ -6,22 +6,24 @@
 	"scripts": {
 		"dev": "vite",
 		"build": "vite build",
-		"preview": "vite preview"
+		"preview": "vite preview",
+		"analyze": "vite build -- --report"
 	},
 	"author": {
 		"name": "webkong",
 		"email": "772930508@qq.com"
 	},
-  "repository":{
-    "type": "git",
-    "url": "git@github.com:webkong/svelte-vite-template.git"
-  },
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:webkong/svelte-vite-template.git"
+	},
 	"devDependencies": {
 		"@sveltejs/vite-plugin-svelte": "^2.4.5",
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-svelte": "^2.30.0",
 		"prettier": "^2.8.0",
 		"prettier-plugin-svelte": "^2.10.1",
+		"rollup-plugin-bundle-analyzer": "^1.6.6",
 		"sass": "^1.66.1",
 		"svelte": "^4.2.0",
 		"vite": "^4.4.9"
