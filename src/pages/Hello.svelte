@@ -1,9 +1,26 @@
 <script>
 	import svelteLogo from "../assets/svelte.svg";
 	import viteLogo from "/vite.svg";
-	import Counter from "../lib/Counter.svelte";
+	import Counter from "../components/Counter.svelte";
 	import { push } from "svelte-spa-router";
 	import { t } from "svelte-i18n";
+	import user from "../stores/user";
+	import { user as userStore } from "../stores/userStore";
+
+	const changeUserName = () => {
+		// user.set({
+		// 	name: "test",
+		// });
+		user.update((v) => {
+			v.name = "test";
+			v.age = 18;
+			return v;
+		});
+		userStore.setName("test123");
+	};
+	const initUserInfo = () => {
+		userStore.setUserSync();
+	};
 </script>
 
 <main>
@@ -16,6 +33,13 @@
 		</a>
 	</div>
 	<h1>Vite + Svelte</h1>
+	<div class="store">
+		<p>
+			{$user.name},{$user.age} / {$userStore.name},{$userStore.age}
+		</p>
+		<button on:click={changeUserName}>Change User Name</button>
+		<button on:click={()=>initUserInfo()}>Init User Info</button>
+	</div>
 
 	<div class="card">
 		<Counter />

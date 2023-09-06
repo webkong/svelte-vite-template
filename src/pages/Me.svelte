@@ -1,5 +1,6 @@
 <script>
 	import { pop, push } from "svelte-spa-router";
+	import user from "../stores/user";
 	const goHome = () => {
 		pop();
 	};
@@ -7,6 +8,11 @@
 
 <main>
 	<div class="title">me page</div>
+	<div class="store">
+		<p>
+			{$user.name},{$user.age}
+		</p>
+	</div>
 	<button
 		on:click={() => {
 			push("/");
