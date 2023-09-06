@@ -1,4 +1,5 @@
 import { defineConfig } from "vite";
+import path from "path";
 import { svelte } from "@sveltejs/vite-plugin-svelte";
 import bundleAnalyzer from "rollup-plugin-bundle-analyzer";
 
@@ -22,5 +23,12 @@ export default defineConfig({
 			treeshake: true
 			// external: ['svelte-i18n', 'svelte-spa-router'],
 		}
-	}
+	},
+	resolve: {
+		alias: {
+			"$components": path.resolve("./src/components"),
+			"$routes": path.resolve("./src/routes"),
+			"$stores": path.resolve("./src/stores"),
+		}
+	}	
 });
