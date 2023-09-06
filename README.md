@@ -1,4 +1,4 @@
-# Svelte + Vite + Router + i18n
+# Svelte + Vite + Router + i18n + Store
 
 This template should help get you started developing with Svelte quickly.
 
@@ -8,7 +8,7 @@ Use different branches according to your needs.
 
 ```shell
 # git clone -b [branch] --depth=1 git@github.com:webkong/
-git clone -b master --depth=1 git@github.com:webkong/svelte-vite-template.git
+git clone -b svt_router_i18n_store --depth=1 git@github.com:webkong/svelte-vite-template.git
 
 cd svelte-vite-template
 npm i
