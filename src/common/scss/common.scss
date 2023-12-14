@@ -1,0 +1,59 @@
+@charset "UTF-8";
+@use "sass:math";
+
+a,img,button,input,select{-webkit-tap-highlight-color:rgba(0,0,0,0);outline:0;}
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td{margin:0;padding:0;vertical-align:baseline;}
+img{border:0 none;vertical-align:top;}
+i,em{font-style:normal;}
+ol,ul{list-style:none;}
+input,select,button,h1,h2,h3,h4,h5,h6{font-size:100%;font-family:inherit;}
+table{border-collapse:collapse;border-spacing:0;}
+a{text-decoration:none;}
+
+
+
+html {
+  scroll-behavior:smooth;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+$design_width: 360;
+// $base_rem: $design_width/10/2;
+$base_rem: math.div(math.div($design-width, 10), 2);
+html {
+  font-size: 18PX;
+  font-size: math.div($base-rem, $design-width) * 100vw;
+}
+
+@media screen and (max-width:320px) {
+  html {
+    font-size: 16PX
+  }
+}
+
+@media screen and (min-width:540px) {
+  html {
+    font-size: 27PX
+  }
+}
+
+body {
+  // PX or Px will ignore by postcss-pxtorem
+  max-width: 540PX;
+  min-width: 320PX;
+  margin: 0 auto;
+  position: relative;
+  box-sizing: border-box;
+  padding: 0;
+  -webkit-text-size-adjust: 100% !important;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+div {
+  box-sizing: border-box;
+}

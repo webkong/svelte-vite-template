@@ -1,0 +1,84 @@
+// 一些常用变量
+$themeC: orange; // 主题色
+$textC: #333; // 文字颜色
+$borderC: #ddd; // 边框颜色
+// 宽高
+@mixin wh($width, $height, $lineH: 0) {
+  width: $width;
+  height: $height;
+  @if($lineH > 0) {
+    line-height: $lineH;
+  }
+}
+// 字体大小，颜色
+@mixin sc($size, $color){
+	font-size: $size;
+	color: $color;
+}
+// 弹窗
+@mixin popup($zindex: 9999, $color: rgba(0, 0, 0, 0.7)) {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: $color;
+  z-index: $zindex;
+  overflow: hidden;
+}
+// 绝对定位水平垂直居中
+@mixin ab-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+// 定位上下居中
+@mixin centerV {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+// 定位左右居中
+@mixin centerH {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+// flex水平垂直居中
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+// 文字超出省略号
+@mixin ellipsis($clamp: 1){
+  overflow: hidden;
+  text-overflow: ellipsis;
+  @if($clamp == 1){
+      white-space: nowrap;
+  }@else{
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: $clamp;
+      -webkit-box-orient: vertical;
+  }
+}
+// 背景图url
+@mixin bg-img ($url){
+  background: url($url) no-repeat;
+  background-size: 100% 100%;
+}
+
+.bg-img-style{
+  background-size: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+
+// 水平镜像翻转
+@mixin mirrorRotateX {
+  transform: rotateY(180deg);   /* 水平镜像翻转 */
+}
